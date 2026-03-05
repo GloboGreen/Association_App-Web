@@ -1,0 +1,54 @@
+/* --------------------------------
+   Tailwind v4 core
+-----------------------------------*/
+@import "tailwindcss";
+
+/* Optional shadcn plugin */
+@plugin "tailwindcss-animate";
+
+/* --------------------------------
+   Base theme + page styles
+-----------------------------------*/
+@layer base {
+  :root {
+    /* dark navbar + light content can be tuned later */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --border: 217 32% 22%;
+    --input: 217 32% 22%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.5rem;
+  }
+
+  /* Instead of @apply border-border (which doesn't exist),
+     just set the default border color with plain CSS */
+  *,
+  *::before,
+  *::after {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+}
